@@ -1,11 +1,8 @@
 import type { NextPage } from "next";
+import Crud from "./Crud";
 
 const Home: NextPage = () => {
-  return (
-    <>
-      <p>adfadf</p>
-    </>
-  );
+  return <Crud />;
 };
 
 export default Home;

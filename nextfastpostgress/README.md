@@ -8,6 +8,9 @@
     - docker-compose run --rm app npm install create-next-app
     - docker-compose run --rm app npx create-next-app プロジェクト名 --ts
 
+- CSSフレームワーク npmを使用する
+- [twin.macro導入](https://qiita.com/oedkty/items/b911b7f3949cd1562fb7)
+
 - backend
   - docker-compose upを実行すれば起動できる
     - docker-compose.ymlで以下となっているため
