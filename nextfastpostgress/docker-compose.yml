@@ -19,7 +19,7 @@ services:
     volumes:
       - ./backend/:/backend/
       - /var/run/docker.sock:/var/run/docker.sock
-    command: uvicorn app.api.server:app --reload --workers 1 --host 0.0.0.0 --port 8000
+    command: uvicorn code.main:app --reload
     env_file:
       - ./backend/.env
     ports:
