@@ -18,12 +18,12 @@ POSTGRES_PORT = config("POSTGRES_PORT", cast=str, default="5432")
 POSTGRES_DB = config("POSTGRES_DB", cast=str)
 
 # 立ち上がるけどSwaggerが立ち上がらない
-# DATABASE_URL = "postgresql://postgres:postgres@postgresserver/db"
-DATABASE_URL = config(
-    "DATABASE_URL",
-    cast=DatabaseURL,
-    default=f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_SERVER}:{POSTGRES_PORT}/{POSTGRES_DB}"
-)
+DATABASE_URL = "postgresql://postgres:postgres@postgresserver/db"
+# DATABASE_URL = config(
+#     "DATABASE_URL",
+#     cast=DatabaseURL,
+#     default=f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_SERVER}:{POSTGRES_PORT}/{POSTGRES_DB}"
+# )
 
 # DBとの接続
 ENGINE = create_engine(

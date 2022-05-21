@@ -16,6 +16,14 @@ app.add_middleware(
 )
 
 # ----------APIの定義------------
+@app.get("/")
+async def get_all_hedgehogs() -> List[dict]:
+    hedgehogs = [
+        {"id": 1, "name": "momo", "color": "SALT & PEPPER", "age": 2},
+        {"id": 2, "name": "coco", "color": "DARK GREY", "age": 1.5}
+    ]
+
+    return hedgehogs
 # テーブルにいる全ユーザ情報を取得 GET
 @app.get("/users")
 def read_users():
