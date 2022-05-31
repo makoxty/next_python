@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import axios from "axios";
+import "twin.macro";
 
 interface ResponseData {
   posts: ApiResponseData[];
@@ -11,12 +12,10 @@ interface ApiResponseData {
   age: number;
 }
 const Crud = () => {
-  const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL as string;
-
   const [posts, setPosts] = useState<ResponseData | []>([]);
   useEffect(() => {
     axios
-      .get(apiBaseUrl)
+      .get("http://127.0.0.1:8000/")
       .then((response) => {
         if (response.data) {
           setPosts(response.data);
@@ -31,7 +30,7 @@ const Crud = () => {
 
   return (
     <>
-      <p>responseデータ</p>
+      <p tw="text-primary">responseデータ</p>
       {posts.map((post) => (
         <div key={post.id}>
           <p>{post.name}</p>
