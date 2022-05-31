@@ -11,10 +11,12 @@ interface ApiResponseData {
   age: number;
 }
 const Crud = () => {
+  const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL as string;
+
   const [posts, setPosts] = useState<ResponseData | []>([]);
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/")
+      .get(apiBaseUrl)
       .then((response) => {
         if (response.data) {
           setPosts(response.data);

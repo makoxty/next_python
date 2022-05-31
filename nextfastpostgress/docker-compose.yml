@@ -1,16 +1,16 @@
-version: '3'
+version: "3"
 services:
   app:
     container_name: frontend
     build:
-      context: .
+      context: ./frontend
       dockerfile: Dockerfile
     volumes:
-      - ./:/usr/src/app 
-    command: sh -c "cd frontend && yarn dev"
+      - ./frontend:/usr/src/app
+    command: "yarn dev"
     ports:
       - "3000:3000"
-# ここからbackend
+  # ここからbackend
   server:
     container_name: backend
     build:
@@ -38,4 +38,4 @@ services:
       - 5432:5432
 
 volumes:
-    postgres_data:
+  postgres_data:
