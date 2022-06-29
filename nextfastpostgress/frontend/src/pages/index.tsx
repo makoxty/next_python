@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
-import Crud from "./Crud";
+import AccountCreateOrLogin from "./AccountCreateOrLogin";
 
 const Home: NextPage = () => {
-  return <Crud />;
+  // return <Crud />
+  return <AccountCreateOrLogin />;
 };
 
 export default Home;
