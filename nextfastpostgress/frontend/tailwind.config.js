@@ -2,8 +2,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "red",
-        secondary: "blue",
+        red: "red",
+        bg_blue: "#b3b1c3",
+        white: "white",
       },
     },
   },
